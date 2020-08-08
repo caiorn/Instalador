@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{874E10AC-AD49-48B5-98D5-F965B55060E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InstaladorMapsCS</RootNamespace>
+    <AssemblyName>InstaladorMapsCS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Map.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmbeddedResources.cs" />
+    <Compile Include="frm1Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm1Inicial.Designer.cs">
+      <DependentUpon>frm1Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm2Instalacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm2Instalacao.Designer.cs">
+      <DependentUpon>frm2Instalacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm1Inicial.resx">
+      <DependentUpon>frm1Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm2Instalacao.resx">
+      <DependentUpon>frm2Instalacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cstrike\maps\cs_chaves.bsp" />
+    <EmbeddedResource Include="cstrike\maps\de_snipe_it5.bsp" />
+    <EmbeddedResource Include="cstrike\maps\fy_pool_day.bsp" />
+    <EmbeddedResource Include="cstrike\maps\he_glass2.bsp" />
+    <EmbeddedResource Include="cstrike\maps\surf_ski_2.bsp" />
+    <EmbeddedResource Include="cstrike\maps\aim_hd_att.bsp" />
+    <EmbeddedResource Include="cstrike\maps\de_dust2_2x2.bsp" />
+    <EmbeddedResource Include="cstrike\aim_dust_smiley.wad" />
+    <EmbeddedResource Include="cstrike\maps\aim_dust_smiley.bsp" />
+    <EmbeddedResource Include="cstrike\maps\vip_truck.bsp" />
+    <EmbeddedResource Include="cstrike\maps\35hp_2.bsp" />
+    <EmbeddedResource Include="cstrike\maps\aim_map_deagle3k.bsp" />
+    <EmbeddedResource Include="cstrike\maps\aim_fixit_deagle.bsp" />
+    <EmbeddedResource Include="cstrike\maps\air_fight2.bsp" />
+    <EmbeddedResource Include="cstrike\maps\he_dodgeball2.bsp" />
+    <EmbeddedResource Include="cstrike\maps\aim_map_mac10.bsp" />
+    <EmbeddedResource Include="cstrike\maps\awp_india.bsp" />
+    <EmbeddedResource Include="cstrike\maps\cs_casa.bsp" />
+    <EmbeddedResource Include="cstrike\maps\de_rats.bsp" />
+    <EmbeddedResource Include="cstrike\de_vegas.wad" />
+    <EmbeddedResource Include="cstrike\maps\fy_iceworld.bsp" />
+    <EmbeddedResource Include="cstrike\maps\aim_headshot.bsp" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Map.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
